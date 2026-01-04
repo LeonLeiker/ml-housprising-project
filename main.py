@@ -7,9 +7,9 @@ from models import calculate_predictions_of_hypothesis, calculate_value_of_loss_
 def main():
     x_standardized, x, y = load_housing_data()
     J_sqrt = []
-    m = len(y)
-    theta_0 = 0
-    theta_1 = 0
+    m = len(y) # number of training examples
+    n = len(x_standardized[0]) # number of features
+    vector_theta = [0.0 for _ in range(n)]
     alpha = 0.001
     training_epochs = 3000
 

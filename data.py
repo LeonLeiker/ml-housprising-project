@@ -33,6 +33,9 @@ def load_housing_data():
 
     x_standardized = standardize_data(x)
 
+    for row in x_standardized:
+        row.insert(0, 1.0)
+
     return x_standardized, x, y
 
 
